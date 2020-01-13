@@ -1,226 +1,387 @@
 body {
-  font-family: 'Roboto', serif;
-  font-size: 13px;
-  line-height: 21px;
-  color: #7d7d7d;
-  background: #ffffff;
+    font-family: 'Baloo Bhai', cursive;
 }
-
-/* --------------------------------------
-* Global Typography
-*------------------------------------------*/
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', serif;
-  color: #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 1.7em;
-  line-height: 1.3em;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-h4 {
-  font-size: 1.7em;
-  line-height: 1.7em;
-  font-weight: 500;
-}
-
-h5 {
-  font-size: 20px;
-  line-height: 25px;
-  font-weight: 400;
-}
-
-h6 {
-  font-size: 15px;
-  line-height: 17px;
-  font-weight: normal;
-}
-
-/* --------------------------------------
-* LINK STYLE
-*------------------------------------------*/
-
-a {
-  color: #010101;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a, a:active, a:focus, a:active {
-  text-decoration: none;
-  outline: none
-}
-
-a:hover, a:focus {
-  color: #58c4dc;
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* ============================= */
 
 /* header */
+
 .header {
-  position: static;
-}
-.header-background {
-  position: absolute;
-  background: url(../images//header-background.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 500px;
+    background: url(../images/man-1253004_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
 }
 
 .header-nav {
-  background: black;
-  opacity: 0.5;
-  width: 100%;
-  height: 40px;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.header-nav ul {
+    display: flex;
+    justify-content: space-between
 }
 
-.header-nav-icon {
-  margin-left: 20px;
-  padding: 5px;
-  color: #ffffff;
+.header-nav li {
+    padding-right: 60px;
+    list-style: none;
+    cursor: pointer;
+}
+.header-nav li:hover{
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -moz-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -ms-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -o-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    -moz-mask-size: 200%;
+    -ms-mask-size: 200%;
+    -o-mask-size: 200%;
+    -webkit-animation: shine 1.3s infinite;
+    -moz-animation: shine 1.3s infinite;
+    -o-animation: shine 1.3s infinite;
+    -ms-animation: shine 1.3s infinite;
+    animation: shine 1.3s infinite;
+  }
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+.header-content {
+    display: flex;
+    justify-content: end;
+    padding-left: 300px;
+}
+.header-content h1 {
+    position: absolute;
+    font-size: 160px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    background: url(../images/header-background.jpg) no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: -41px -85px;
+    text-align: center;
+    height: 635px;
+    margin-top: 0;
+    margin-left: 500px;
+    margin-bottom: 0;
+    
+}
+
+/* about me */
+.about {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.about-me {
+    width: 500px;
+}
+.skill{
+    width: 50%;
+    margin: 0 auto;
+  }
+  @keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  .bar::before{
+    content:  attr(data-skill);
+    background-color: #f3b0ff;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+  
+  .bar.front::before{
+    background-color: #ffcc33;
+  }
+  .bar.back::before{
+    background-color: #a6cfe3;
+  }
+  
+  .bar.learning::before{
+    width: calc(20% - 10px);
+  }
+  .bar.basic::before{
+    width: calc(40% - 10px);
+  }
+  .bar.intermediate::before{
+    width: calc(50% - 10px);
+  }
+  .bar.advanced::before{
+    width: calc(70% - 10px);
+  }
+  .bar.expert::before{
+    width: calc(80% - 10px);
+  }
+  
+/* portfolio */
+.portfolio {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+.portfolio-title {
+    display: flex;
+    justify-content: center;
+}
+.portfolio-nav ul {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.portfolio-nav ul li:hover{
+    cursor: pointer;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -moz-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -ms-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -o-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    -moz-mask-size: 200%;
+    -ms-mask-size: 200%;
+    -o-mask-size: 200%;
+    -webkit-animation: shine 1.3s infinite;
+    -moz-animation: shine 1.3s infinite;
+    -o-animation: shine 1.3s infinite;
+    -ms-animation: shine 1.3s infinite;
+    animation: shine 1.3s infinite;
+  }
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+.portfolio-menu ul {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(6 , 100px);
+    grid-template-columns: repeat(5 , 1fr);
+    grid-gap: 20px;
+}
+.portfolio-item {
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.large {
+    grid-row: span 3;
+    grid-column: span 3;
+}
+.tall {
+    grid-area: 4 / 4 / span 3 / span 2;
+}
+.wide {
+    grid-area: span 2 / span 3;
+}
+
+.one {  
+    position: relative;
+    background-image: url(../images/login-project.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms;
+}
+
+.one:hover{
+     background-blend-mode: initial;
+     background-position: top left;
+}
+.two {
+    position: relative;
+    background-image: url(../images/portfolio2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms;
+}
+
+.two:hover{
+     background-blend-mode: initial;
+     background-position: bottom;
+}
+.three {
+    position: relative;
+    background-image: url(../images/portfolio3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms;
+}
+
+.three:hover{
+     background-blend-mode: initial;
+     background-position: bottom;
+}
+
+.four {
+    position: relative;
+    background-image: url(../images/portfolio4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms
+}
+
+.four:hover{
+     background-blend-mode: initial;
+     background-position: bottom;
+}
+
+.five {
+    position: relative;
+    background-image: url(../images/psd.png);
+    background-size: 800px;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms;
+}
+
+.five:hover{
+     background-blend-mode: initial;
+     background-position: top ;
+}
+
+.six {
+    position: relative;
+    background-image: url(../images/portfolio6.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    z-index: 10;
+    transition: all ease-in-out 300ms;
+}
+
+.six:hover{
+     background-blend-mode: initial;
+     background-position: bottom;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 11; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+/* Add Animation */
+.modal-content {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.header-nav-menu {
-  display: none;
-  background: black;
-  color: white;
-   margin: 10px;
-   padding: 10px;
-   line-height: 30px;
-}
-
-.header-info {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  background: white;
-  width: 70%;
-  height: 527px;
-  margin: auto;
-  margin-top: 200px;
-  padding: 40px;
-}
-
-.header-info-content {
-  margin-top: 30px;
-}
-
-
-
-.header-info-about {
-  background: url(../images/bg-1.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: justify;
-  margin: 20px;
-  padding: 20px;
-}
-
-/* end header */
-
-/* ========================== */
-/*start portfolio*/
-
-.portfolio {
-  margin-top: 50px;
-  position: relative;
-  text-align: center;
-}
-.portfolio-bar {
-  display: grid;
-  align-content: center;
-  margin: 30px;
-  font-size: 13px;
-
-}
-ul li {
-  display: inline;
-  margin-right: 40px;
-}
-.portfolio-img {
-  display: grid;
-
-}
-
-/* end portfolio */
-
-
-
-/* =============== */
-
-/* start exp */
-.exp {
-  margin-top: 50px;
-  position: relative;
-  text-align: center;
-}
-
-/* end exp */
-/* ===============   */
-/* footer */
-  .footer {
-    position: relative;
-    background: black;
-    opacity: 0.9;
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
     width: 100%;
   }
-  .footer-title {
-    padding-top: 30px;
-    font-size: 25px;
-    line-height: 18px;
-    font-weight: 500;
-    text-decoration: underline;
-  }
-  .footer-content {
-    display: flex;
-    text-align: start;
-    padding: 30px;
-  }
-  .footer-info-social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    padding: 5px;
-    font-size: 20px;
-    background: gray;
-    height: 40px;
-  }
-/* end footer */
+}
