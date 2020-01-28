@@ -9,3 +9,30 @@ console.log(bg_img);
 $('.close').click(function () {
   $('#myModal').removeAttr("style").hide()
 });
+
+
+// scroll 
+$(document).ready(function () {
+  $('.about-nav ' ).click(function() {
+  $('html, body').animate({
+    scrollTop: $("#about").offset().top
+  }, 1000)
+}),
+$('.portfolio-nav').click(function() {
+  $('html, body').animate({
+    scrollTop: $("#portfolio").offset().top
+  }, 1000)
+}),
+$('.education-nav').click(function() {
+  $('html, body').animate({
+    scrollTop: $("#education").offset().top
+  }, 1000)
+}),
+$('.contact-nav').click(function() {
+  $('html, body').animate({
+    scrollTop: $("#contact").offset().top
+  }, 1000)
+})
+})
+
+
