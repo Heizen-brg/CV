@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Bison-Bold;
+  src: url(../fonts/Bison-Bold.ttf);
+}
+
+body {
+  font-family: Bison-Bold;
+  background-color: #fdcd07;
+}
+
+.header-background {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 787px;
+  background-color: black;
+}
+
+.header-background img {
+  margin-top: 30%;
+  margin-left: 66%;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+  color: #fdcd07;
+}
+
+.header-title h1 {
+  font-size: 100pt;
+  letter-spacing: 30px;
+}
+
+.header-title h4 {
+  font-size: 30pt;
+  letter-spacing: 4px;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  color: #fdcd07;
+  padding: 50px;
+  font-size: 28pt;
+  letter-spacing: 4px;
+}
+
+.button1 {
+  border: 1px solid white;
+  padding: 20px 40px 20px 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+.button2 {
+  border: 1px solid #fdcd07;
+  background-color: #fdcd07;
+  text-align: center;
+  padding: 20px 120px 20px 120px;
+  border-radius: 20px;
+  color: black;
+}
+
+.header-social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.header-social img {
+  margin: 10px;
+}
+
+.body-title {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  letter-spacing: 10px;
+  padding: 40px;
+}
+
+.body-portfolio {
+  padding: 1em;
+  column-count: 3;
+  column-gap: 1em;
+  background-color: white;
+}
+
+.body-portfolio img {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0 1em;
+}
+
+.footer {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.footer-img {
+  width: 100%;
+}
+
+.footer-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fdcd07;
+  margin-right: 10px;
+}
+
+.footer-quote-1 {
+  margin: 40px 0 0 80px;
+  font-size: 66pt;
+  letter-spacing: 10px;
+}
+
+.footer-quote-1::after {
+  content: "CLOTHES";
+  font-size: 100pt;
+}
+
+.footer-quote-2 {
+  margin: 40px 0 40px 80px;
+  font-size: 66pt;
+  letter-spacing: 10px;
+}
+
+.footer-quote-2::after {
+  content: "ATTITUDE";
+  font-size: 100pt;
+}
+
+/* iPhone 6/7/8 plus */
+
+
+
+@media only screen and (max-width: 1278px) {
+  .header-background img {
+    margin-top: 35%;
+    margin-left: 63%;
+  }
+  .footer-quote h1 {
+    font-size: 40pt;
+  }
+  .footer-quote h1::after {
+    font-size: 80pt;
+  }
+  .footer img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-background {
+    height: 80%;
+  }
+  .header-background img {
+    margin-left: 54%;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-quote {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header-background img {
+    margin-top: 30%;
+    margin-left: 47%;
+  }
+  .header-title h1 {
+    font-size: 70pt;
+  }
+  .header-button {
+    font-size: 20pt;
+  }
+  .body-title {
+    font-size: 70px;
+  }
+  .body-portfolio {
+    padding: 1em;
+    column-count: 2;
+    column-gap: 1em;
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .header-background img {
+    margin-left: 27%;
+  }
+  .header-title h1 {
+    font-size: 30pt;
+  }
+  .header-title h4 {
+    font-size: 15pt;
+  }
+  .header-button {
+    font-size: 10pt;
+  }
+}
+
+
+@media only screen and (max-width: 580px) {
+  .header-background {
+    height: 387px;
+  }
+  .header-background img {
+    margin-left: 37%;
+    width: 357px;
+    height: 255px;
+  }
+  .header-title h1 {
+    font-size: 40pt;
+    letter-spacing: 10px;
+  }
+  .header-title h4 {
+    font-size: 10pt;
+  }
+  .header-button {
+    flex-direction: column;
+  }
+  .button2 {
+    margin-top: 20px;
+    padding: 20px 60px 20px 60px ;
+  }
+  .body-title {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  .body-portfolio {
+    padding: 1em;
+    column-count: 1;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer img {
+    width: 100%;
+  }
+  .footer-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fdcd07;
+  }
+  .footer-quote h1 {
+    font-size: 16px;
+  }
+  .footer-quote h1::after {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .header-background img {
+    margin-left: 7%;
+  }
+  .header-button {
+    flex-direction: column;
+  }
+  .button2 {
+    margin-top: 10px;
+  }
+  .header-social {
+    padding: 20px;
+  }
+}
