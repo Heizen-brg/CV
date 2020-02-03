@@ -5,24 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet"> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="./public/stylesheet/style.css">
-  
+
   <title>Document</title>
 </head>
 
 <body>
   <!-- Header -->
-  <div class="header lazy">
-    <div class="header-nav">
+  <div class="header">
+    <div class="header-nav" data-aos="fade-in">
       <h1>My Resume</h1>
       <ul>
-        <a href="#about"><li class="about-nav">About me</li></a>
-        <a href="#portfolio"><li class="portfolio-nav">Portfolio</li></a>
-        <a href="#education"><li class="education-nav">Education</li></a>
-        <a href="#contact"><li class="contact-nav">Contact</li></a>
+        <a href="#about">
+          <li class="about-nav">About me</li>
+        </a>
+        <a href="#portfolio">
+          <li class="portfolio-nav">Portfolio</li>
+        </a>
+        <a href="#education">
+          <li class="education-nav">Education</li>
+        </a>
+        <a href="#contact">
+          <li class="contact-nav">Contact</li>
+        </a>
       </ul>
+    </div>
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="#about">
+          <li class="about-nav">About me</li>
+        </a>
+        <a href="#portfolio">
+          <li class="portfolio-nav">Portfolio</li>
+        </a>
+        <a href="#education">
+          <li class="education-nav">Education</li>
+        </a>
+        <a href="#contact">
+          <li class="contact-nav">Contact</li>
+        </a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <div class="header-content">
       <h1>Hi , I'm Minh Duong</h1>
@@ -30,26 +58,30 @@
   </div>
 
   <!-- About me -->
-  <div id="about" class="about lazy">
-    <div class="about-me">
+  <div id="about" class="about">
+    <div class="about-me" data-aos="flip-left">
       <div class="about-title">
         <h1>About me</h1>
       </div>
       <div class="about-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam voluptate quisquam pariatur veniam alias
-          velit, eaque minus a. Aperiam cupiditate praesentium adipisci minima enim vel illo, odio repellat molestias
-          nobis, ea culpa architecto exercitationem! Numquam repellat fuga nemo magnam!</p>
+        <p>Hi! My name is Minh Duong. I'm 24 years old and have been working in web programer for 1 years. I love the
+          atmosphrere
+          of working in profestsional,
+          creative environment and with
+          the desire to learn the
+          necessary skills at work so i
+          sent this CV.</p>
       </div>
     </div>
     <!-- Skill -->
-    <div class="skill">
+    <div class="skill" data-aos="zoom-in">
       <h1>Skill</h1>
       <div class="bar learning" data-skill="Design"></div>
       <div class="bar back basic" data-skill="NodeJS"></div>
       <div class="bar back intermediate" data-skill="Javascript"></div>
       <div class="bar front advanced" data-skill="CSS"></div>
       <div class="bar front expert" data-skill="HTML"></div>
-  
+
     </div>
     <!-- End Skill -->
   </div>
@@ -57,52 +89,59 @@
 
   <!--Portfolio -->
   <div id="portfolio" class="portfolio">
-    <div class="portfolio-title">
+    <div class="portfolio-title" data-aos="flip-left">
       <h1>Portfolio</h1>
     </div>
-    <div class="portfolio-nav">
+    <div class="portfolio-nav" data-aos="flip-left">
+    </div>
+    <div class="portfolio-menu">
       <ul>
-        <li data-type="all">All</li>
-        <li data-type="type1">Project</li>
-        <li data-type="type2">Film Photo</li>
+        <li data-aos="zoom-out-up" onclick="showModal()" class="portfolio-item medium one"></li>
+        <li data-aos="zoom-out-down" onclick="showModal()" class="portfolio-item large two"></li>
+        <li data-aos="zoom-out-up" onclick="showModal()" class="portfolio-item medium three"></li>
+        <li data-aos="zoom-out-down" onclick="showModal()" class="portfolio-item small four"></li>
+        <li data-aos="zoom-out-up" onclick="showModal()" class="portfolio-item tall five"></li>
+        <li data-aos="zoom-out-down" onclick="showModal()" class="portfolio-item wide six"></li>
       </ul>
     </div>
-      <div class="portfolio-menu">
-        <ul>
-        <li onclick="showModal()" class="portfolio-item medium one"></li>
-        <li onclick="showModal()"  class="portfolio-item large two"></li>
-        <li onclick="showModal()" class="portfolio-item medium three"></li>
-        <li onclick="showModal()" class="portfolio-item small four"></li>
-        <li onclick="showModal()" class="portfolio-item tall five"></li>
-        <li onclick="showModal()" class="portfolio-item wide six"></li>
-        </ul>
-      </div>
   </div>
-  <div id="myModal" class="modal">
+  <div id="myModal" data-aos="flip-left" class="modal">
     <span class="close">&times;</span>
     <img src="" class="modal-content" id="img">
   </div>
   <!-- End portfolio -->
   <!-- Education -->
-  <div id="education" class="education">
+  <div id="education" data-aos="fade-up" class="education ">
     <div class="education-title">
       <h1>Education</h1>
     </div>
     <div class="education-content squares">
       <div class="education-content-item">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, soluta. Dolorum repellat eum molestias labore nesciunt fugiat delectus. Excepturi iure a repudiandae eaque cupiditate expedita voluptatem atque enim voluptatum maxime.</p>
+        <p>NodeJS training bootcamp</p>
+        <p> + Familliar with Nodejs
+          with crontab.</p>
+        <p> + Understand the Event-Loop mechanism</p>
+        <p> + Create RESTful API with ExpressJS framework</p>
       </div>
       <div class="education-content-item">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, soluta. Dolorum repellat eum molestias labore nesciunt fugiat delectus. Excepturi iure a repudiandae eaque cupiditate expedita voluptatem atque enim voluptatum maxime.</p>            
+        <p> + Strong experience with HTML</p>
+        <p> + Familliar with CSS(Bootstrap , Flexbox , Grid)</p>
+        <p> + Ability to manage responsive</p>
       </div>
       <div class="education-content-item">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, soluta. Dolorum repellat eum molestias labore nesciunt fugiat delectus. Excepturi iure a repudiandae eaque cupiditate expedita voluptatem atque enim voluptatum maxime.</p>
+        <p> + Experience working with Version control systems (Git)</p>
+        <p> + Familliar with cloud service : Heroku , AWS</p>
       </div>
       <div class="education-content-item">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, soluta. Dolorum repellat eum molestias labore nesciunt fugiat delectus. Excepturi iure a repudiandae eaque cupiditate expedita voluptatem atque enim voluptatum maxime.</p>
+        <p> + Understanding of UI /UX</p>
+        <p> + Basic skill with Photoshop , Ai</p>
       </div>
       <div class="education-content-item">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, soluta. Dolorum repellat eum molestias labore nesciunt fugiat delectus. Excepturi iure a repudiandae eaque cupiditate expedita voluptatem atque enim voluptatum maxime.</p>
+        <p> Basic experience working with back-end : </p>
+        <p>+ NodeJS</p>
+        <p>+ RESTful API</p>
+        <p>+ Working with SQL and No SQL (MySQL , MongoDB)</p>
+        <p>+ Docker</p>
       </div>
 
     </div>
@@ -111,7 +150,7 @@
   <!-- Footer Contact -->
   <footer class="footer-distributed">
 
-    <div id="contact" class="footer-left">
+    <div id="contact" data-aos="fade-up-right" class="footer-left">
 
       <h3>Contact Me</h3>
 
@@ -139,7 +178,7 @@
 
     </div>
 
-    <div class="footer-right">
+    <div class="footer-right" data-aos="fade-up-left">
 
       <p>Contact Us</p>
 
@@ -157,18 +196,18 @@
   <!-- End footer -->
   <article id="wrap">
     <article id="lightings">
-        <section id="one">
-              <section id="two">
-                  <section id="three">
-                      <section id="four">
-                          <section id="five">
-                              
-                          </section>
-                      </section>
-                  </section>
+      <section id="one">
+        <section id="two">
+          <section id="three">
+            <section id="four">
+              <section id="five">
+
               </section>
+            </section>
+          </section>
+        </section>
       </section>
-      </article>
+    </article>
   </article>
 
 
@@ -184,10 +223,10 @@
 
 
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
- <!-- jsDeliver -->
-
- <!-- cdnjs -->
+<!-- jsDeliver -->
+<!-- cdnjs -->
 <script src="https://kit.fontawesome.com/2b56ab75d7.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
